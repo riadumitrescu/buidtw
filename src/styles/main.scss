@@ -945,9 +945,10 @@ main {
 
 // Apply Section
 .apply-section {
-    padding: $spacing-xxl $spacing-lg $spacing-lg;
+    padding: $spacing-xxl $spacing-lg;
     background-color: $color-light;
     position: relative;
+    margin-bottom: -80px;
     
     &::before {
         content: '';
@@ -983,16 +984,15 @@ main {
     overflow: hidden;
     box-shadow: $shadow-lg;
     transition: $transition-normal;
-    margin-bottom: 0;
-    
-    iframe {
-        width: 100% !important;
-        height: 100% !important;
-    }
     
     &:hover {
         transform: translateY(-5px);
         box-shadow: $shadow-lg;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 

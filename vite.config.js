@@ -2,30 +2,22 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/buildtowear/',
   root: 'src',
+  base: '/build-to-wear/',
   build: {
-    outDir: '../docs',
+    outDir: '../dist',
     emptyOutDir: true,
+    assetsDir: 'assets',
+    sourcemap: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        founders: resolve(__dirname, 'src/founders.html'),
         gallery: resolve(__dirname, 'src/gallery.html'),
-        story: resolve(__dirname, 'src/stories/1.html'),
+        story: resolve(__dirname, 'src/stories/1.html')
       },
     },
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    },
-    sourcemap: true,
-    assetsInlineLimit: 4096,
-    chunkSizeWarningLimit: 1000,
   },
-  publicDir: '../public',
   server: {
     port: 3000,
     open: true,
@@ -35,17 +27,6 @@ export default defineConfig({
       scss: {
         additionalData: '',
       },
-    },
-    postcss: {
-      plugins: [
-        require('autoprefixer'),
-        require('cssnano')({
-          preset: 'default',
-          discardComments: {
-            removeAll: true,
-          },
-        }),
-      ],
     },
   },
 }); 
