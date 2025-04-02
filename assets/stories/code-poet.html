@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code Poet | Build To Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.scss">
+</head>
+<body>
+    <main>
+        <section class="story-hero">
+            <div class="story-hero__content">
+                <h1 class="story-hero__title">The Code Poet</h1>
+                <p class="story-hero__creator">by Sarah Chen</p>
+            </div>
+        </section>
+
+        <section class="story-content">
+            <div class="story-content__grid">
+                <div class="story-content__image">
+                    <img src="/assets/stories/code-poet-front.jpg" alt="The Code Poet Hoodie Front" class="story-content__image--front">
+                    <img src="/assets/stories/code-poet-back.jpg" alt="The Code Poet Hoodie Back" class="story-content__image--back">
+                </div>
+
+                <div class="story-content__text">
+                    <div class="story-content__section">
+                        <h2 class="section-title">About the Creator</h2>
+                        <p class="story-content__description">
+                            Sarah Chen is a full-stack developer and poet who believes in the intersection of technology and art. 
+                            Her work explores the beauty of code as a form of expression, translating complex algorithms into 
+                            elegant, readable poetry.
+                        </p>
+                    </div>
+
+                    <div class="story-content__section">
+                        <h2 class="section-title">The Design</h2>
+                        <p class="story-content__description">
+                            The hoodie features a minimalist design that incorporates elegant code snippets from Sarah's 
+                            favorite algorithms. The front displays a poetic implementation of a binary search tree, while 
+                            the back showcases a haiku-inspired sorting algorithm. The design uses monospace typography 
+                            and subtle geometric patterns to create a balance between technical precision and artistic 
+                            expression.
+                        </p>
+                    </div>
+
+                    <div class="story-content__section">
+                        <h2 class="section-title">Why This Matters</h2>
+                        <p class="story-content__description">
+                            "Code is more than just instructions for machines—it's a language that can be beautiful, 
+                            expressive, and meaningful. This hoodie represents my belief that programming is an art form, 
+                            and every line of code tells a story. When I wear it, I'm not just showing off my work; 
+                            I'm sharing my philosophy that technology and creativity are inseparable."
+                        </p>
+                    </div>
+
+                    <div class="story-content__qr">
+                        <img src="/assets/qr/code-poet-qr.png" alt="QR Code" class="story-content__qr-image">
+                        <p class="story-content__qr-text">Scan to explore Sarah's portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-navigation">
+            <div class="story-navigation__container">
+                <a href="/stories/digital-dreams.html" class="story-navigation__link story-navigation__link--next">
+                    <span class="story-navigation__label">Next Story</span>
+                    <span class="story-navigation__title">Digital Dreams</span>
+                </a>
+                <a href="/gallery.html" class="story-navigation__link story-navigation__link--back">
+                    <span class="story-navigation__label">Back to Gallery</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/js/story.js"></script>
+</body>
+</html> 

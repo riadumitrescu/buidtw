@@ -4,55 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Founders Drop | Build To Wear</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/main.scss">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-    <main>
-        <section class="founders-hero">
-            <div class="founders-hero__content">
-                <h1 class="founders-hero__title">Founders Drop</h1>
-                <p class="founders-hero__subtitle">10 one-of-a-kind hoodies for 10 unique creators. No fees. Just your story.</p>
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">Build To Wear</a>
+            <div class="nav__menu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="gallery.html" class="nav__link">Gallery</a>
+                <a href="founders.html" class="nav__link active">Founders Drop</a>
+                <a href="about.html" class="nav__link">About</a>
             </div>
+        </div>
+    </nav>
+
+    <main class="founders">
+        <section class="founders__hero">
+            <h1>Founders Drop Application</h1>
+            <p>Be one of the first 10 creators to have their story turned into a wearable piece.</p>
         </section>
 
-        <section class="founders-content">
-            <div class="founders-content__grid">
-                <div class="founders-content__text">
-                    <h2 class="section-title">Who It's For</h2>
-                    <p class="founders-content__description">
-                        Writers, developers, illustrators, musicians, educators, researchers, builders. 
-                        Anyone who makes and wants to wear what they've made.
-                    </p>
-
-                    <h2 class="section-title">What's Included</h2>
-                    <ul class="founders-content__list">
-                        <li>Custom hoodie designed around your work</li>
-                        <li>Blog-style feature on our site</li>
-                        <li>QR code linking to your project</li>
-                    </ul>
-
-                    <h2 class="section-title">Cost</h2>
-                    <p class="founders-content__description">
-                        Just pay for printing and shipping. We cover the design.
-                    </p>
+        <section class="founders__form">
+            <form id="foundersForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
 
-                <div class="founders-content__form">
-                    <iframe 
-                        src="https://tally.so/embed/your-form-id" 
-                        width="100%" 
-                        height="800" 
-                        frameborder="0" 
-                        allowfullscreen>
-                    </iframe>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="portfolio">Portfolio/Work Link</label>
+                    <input type="url" id="portfolio" name="portfolio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="story">Your Creative Story</label>
+                    <textarea id="story" name="story" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="button button--primary">Submit Application</button>
+            </form>
         </section>
     </main>
 
-    <script type="module" src="/src/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html> 

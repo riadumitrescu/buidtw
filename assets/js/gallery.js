@@ -159,4 +159,42 @@ lightbox.addEventListener('click', (e) => {
 });
 
 // Initialize gallery
-populateGallery(); 
+populateGallery();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.querySelector('.gallery__grid');
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxClose = document.querySelector('.lightbox__close');
+
+    // Sample gallery items - replace with your actual data
+    const items = [
+        {
+            image: 'assets/gallery/item1.jpg',
+            title: 'Code Poetry Hoodie',
+            description: 'A hoodie that tells the story of coding through visual poetry.',
+            link: 'stories/1.html'
+        },
+        // Add more items as needed
+    ];
+
+    // Populate gallery
+    items.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'gallery__item';
+        itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.title}">
+            <div class="gallery__item-info">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+            </div>
+        `;
+        gallery.appendChild(itemElement);
+    });
+
+    // Lightbox functionality
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    }
+}); 

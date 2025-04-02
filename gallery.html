@@ -7,46 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/main.scss">
+    <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
-    <main>
-        <section class="gallery-hero">
-            <div class="gallery-hero__content">
-                <h1 class="gallery-hero__title">Creator Stories</h1>
-                <p class="gallery-hero__subtitle">Explore the wearable journeys of our creators</p>
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">Build To Wear</a>
+            <div class="nav__menu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="gallery.html" class="nav__link active">Gallery</a>
+                <a href="founders.html" class="nav__link">Founders Drop</a>
+                <a href="about.html" class="nav__link">About</a>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="gallery-filters">
-            <div class="gallery-filters__container">
-                <button class="filter-button active" data-filter="all">All</button>
-                <button class="filter-button" data-filter="design">Design</button>
-                <button class="filter-button" data-filter="code">Code</button>
-                <button class="filter-button" data-filter="art">Art</button>
-                <button class="filter-button" data-filter="music">Music</button>
-            </div>
-        </section>
-
-        <section class="gallery-grid">
-            <div class="gallery-grid__container">
-                <!-- Gallery items will be populated dynamically -->
-            </div>
-        </section>
-
-        <div class="lightbox">
-            <div class="lightbox__content">
-                <button class="lightbox__close">&times;</button>
-                <div class="lightbox__image"></div>
-                <div class="lightbox__info">
-                    <h2 class="lightbox__title"></h2>
-                    <p class="lightbox__description"></p>
-                    <a href="#" class="lightbox__link button button--secondary">View Full Story</a>
-                </div>
-            </div>
+    <main class="gallery">
+        <h1 class="gallery__title">Creator Gallery</h1>
+        <div class="gallery__grid">
+            <!-- Gallery items will be loaded dynamically -->
         </div>
     </main>
 
-    <script type="module" src="/src/js/gallery.js"></script>
+    <div class="lightbox">
+        <div class="lightbox__content">
+            <button class="lightbox__close">&times;</button>
+            <div class="lightbox__image"></div>
+            <div class="lightbox__info">
+                <h2 class="lightbox__title"></h2>
+                <p class="lightbox__description"></p>
+                <a href="#" class="lightbox__link button button--secondary">View Full Story</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/gallery.js"></script>
 </body>
 </html> 

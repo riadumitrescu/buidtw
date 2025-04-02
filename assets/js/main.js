@@ -139,7 +139,7 @@ document.querySelector('.email-form__container').addEventListener('submit', asyn
     }
 });
 
-// Navigation menu toggle
+// Navigation toggle for mobile
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav__toggle');
     const navMenu = document.querySelector('.nav__menu');
